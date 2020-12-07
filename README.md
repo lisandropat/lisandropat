@@ -19,13 +19,14 @@ Visual designer's portfolio based on [Gatsby](https://github.com/gatsbyjs/gatsby
 
 <div align="center">
     <a href="https://developers.google.com/web/tools/lighthouse/">
-      <img src="docs/pwa-score.png" alt="Lighthouse Score" />
+      <img src="static/pwa-score.png" alt="Lighthouse Score" />
     </a>
 </div>
 
 ### Deploy
 
-This site is deployed to Netlify. Read more about [![how to deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+This site is deployed to Netlify. Read more about:
+[![how to deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
 
 <hr>
 
