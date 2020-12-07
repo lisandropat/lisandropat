@@ -18,7 +18,7 @@ Visual designer's portfolio based on [Gatsby](https://github.com/gatsbyjs/gatsby
 ### Lighthouse Audit Score
 
 <div align="center">
-    <a href="https://developers.google.com/web/tools/lighthouse/">
+    <a href="https://developers.google.com/web/tools/lighthouse/" target="_blank">
       <img src="static/pwa-score.png" alt="Lighthouse Score" />
     </a>
 </div>
@@ -26,7 +26,7 @@ Visual designer's portfolio based on [Gatsby](https://github.com/gatsbyjs/gatsby
 ### Deploy
 
 This site is deployed to Netlify. Read more about:
-<br>
+<br><br>
 [![how to deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
 
 <hr>
