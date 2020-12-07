@@ -1,18 +1,37 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+<div align="center"  style="margin-bottom:30px">
+    <img src="static/pat.png" alt="Logo" width='200px' height='200px'/>
+</div>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+<div align="center">
+    <img src="https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820" alt="Logo" />
+    <a href='https://github.com/prettier/prettier'>
+      <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Logo" />
+    </a>
+</div>
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+# lisandropat
 
-## 🚀 Quick start
+Visual designer's portfolio based on [Gatsby](https://github.com/gatsbyjs/gatsby/).
+
+**NOTE**: A portfolio is a great tool to show your experience, so I highly recommend having one. In case you want to develop it using Gatsby, a static site generator based on React, here you have [a list of free-to-use starters](https://www.gatsbyjs.com/starters/?)
+
+### Lighthouse Audit Score
+
+<div align="center">
+    <a href="https://developers.google.com/web/tools/lighthouse/">
+      <img src="docs/pwa-score.png" alt="Lighthouse Score" />
+    </a>
+</div>
+
+### Deploy
+
+This site is deployed to Netlify. Read more about [![how to deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+
+<hr>
+
+## About Gatsby
+
+### 🚀 Quick start
 
 1.  **Create a Gatsby site.**
 
@@ -40,7 +59,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
-## 🧐 What's inside?
+### 🧐 What's inside?
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
@@ -82,7 +101,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-## 🎓 Learning Gatsby
+### 🎓 Learning Gatsby
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
 
@@ -90,10 +109,8 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## 💫 Deploy
+<hr>
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+## Author
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+Lisandro Patiño ([@lisandropat](https://lisandropat.com))
