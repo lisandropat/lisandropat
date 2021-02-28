@@ -1,10 +1,10 @@
 <div align="center"  style="margin-bottom:30px">
-    <img src="static/pat.png" alt="Logo" width='200px' height='200px'/>
+    <img src="src/images/pat.png" alt="Logo" width='200px' height='200px'/>
 </div>
 
 <div align="center">
     <img src="https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820" alt="Logo" />
-    <a href='https://github.com/prettier/prettier'>
+    <a href='https://github.com/prettier/prettier' target="_blank">
       <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Logo" />
     </a>
 </div>

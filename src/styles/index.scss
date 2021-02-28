@@ -1,0 +1,17 @@
+@import './reset.scss';
+
+$p: #FF9A85;
+
+$b: #101010;
+$w: #FBFBFB;
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    color: $b;
+    background-color: $w;
+}
+
+a { 
+    text-decoration: none;
+    transition: .2s;
+}

@@ -1,89 +1,67 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
+import React from "react";
+import { Helmet } from "react-helmet";
 
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
-
+const SEO = ({ title, description }) => {
+  const schemaOrgJSONLD = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Buenos Aires, Argentina",
+      "addressRegion": "BA",
+      "postalCode": "1414",
+      "streetAddress": "Av. Cnel Niceto Vega"
+    },
+    "email": "mailto:contact@lisandropat.com",
+    "image": "image.png",
+    "jobTitle": "Visual designer",
+    "name": "Lisandro Pat",
+    "telephone": "(+549) 1125300099",
+    "url": "https://lisandropat.com/"
+  }
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    <Helmet>
+      <html lang="en" />
+
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1 " />
+
+      <meta name="full-screen" content="yes" />
+      <meta name="browsermode" content="application" />
+      <meta name="layoutmode" content="fitscreen/standard" />
+      <meta name="imagemode" content="force" />
+      <meta name="screen-orientation" content="portrait" />
+
+      <meta name="robots" content="index, follow" />
+      <meta name="distribution" content="global" />
+      <meta http-equiv="content-language" content="en" />
+      <meta http-equiv="language" content="en" />
+
+      <title>{title}</title>
+
+      <meta name="description" content={description} data-react-helmet="true" />
+      <meta name="image" content="https://lisandropat.com/image.png" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content="https://lisandropat.com/image.png" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content="https://lisandropat.com/image.png" />
+      
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@ottokoi" />
+      <meta name="twitter:creator" content="@ottokoi" />
+
+      <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet dns-prefetch" />
+      
+      <link href="//cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet dns-prefetch" />
+
+      <script type="application/ld+json">
+        {JSON.stringify(schemaOrgJSONLD)}
+      </script>
+      
+    </Helmet>
   )
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-}
-
-export default SEO
+export default SEO;
