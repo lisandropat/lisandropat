@@ -34,6 +34,13 @@ module.exports = {
         icon: `src/images/pat.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: "#FF9A85",
+        showSpinner: false,
+      },
+    },
     `gatsby-plugin-offline` // Enables Progressive Web App + Offline functionality, visit: https://gatsby.dev/offline
   ],
 }

@@ -1,0 +1,21 @@
+@import '../index.scss';
+
+footer {
+    .menu {
+        position: absolute;
+        bottom: 50px;
+        right: 70px;
+        user-select: none;
+        a {
+            margin-left: 40px;
+            color: $lg;
+            font-weight: 500;
+            font-size: .785rem;
+            line-height: 1.5;
+            &:hover {
+                color: $p;
+                filter: drop-shadow(0px 5px 10px $p);
+            }
+        }
+    }
+}

@@ -1,6 +1,8 @@
 import React from "react";
 import AnimatedCursor from "react-animated-cursor";
 
+import '../../styles/index.scss';
+
 // TODO: Re-do https://github.com/stephenscaff/react-animated-cursor component in order to include a border around the solid cursor.
 // TODO: Replace native scrollbar with a custom designed one and a smooth wheel experience.
 

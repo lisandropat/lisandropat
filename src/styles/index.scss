@@ -4,13 +4,23 @@
 $p: #FF9A85;
 
 $b: #101010;
+$g: #162638;
+$lg: #8a8f9b;
 $w: #FBFBFB;
+
+/*
+    This webpage IS NOT mobile first. I intentionally made it this way as 90% of the visits come from
+    notebooks and desk computers. Also SEO is not key, this webpage is purelly designed in order
+    to show up digital artistic skills.
+*/
 
 html, body {
     font-family: 'Poppins', sans-serif;
     color: $b;
     background-color: $w;
     overflow-x: hidden;
+    overflow-y: overlay;
+    cursor: none;
 }
 
 a { 
@@ -20,4 +30,5 @@ a {
 
 main {
     min-height: 100vh;
+    background-color: $w;
 }
