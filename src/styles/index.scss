@@ -1,4 +1,5 @@
 @import './reset.scss';
+@import './scrollbar.scss';
 
 $p: #FF9A85;
 
@@ -9,9 +10,14 @@ html, body {
     font-family: 'Poppins', sans-serif;
     color: $b;
     background-color: $w;
+    overflow-x: hidden;
 }
 
 a { 
     text-decoration: none;
     transition: .2s;
+}
+
+main {
+    min-height: 100vh;
 }

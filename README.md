@@ -115,4 +115,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## Author
 
-Lisandro Patiño ([@lisandropat](https://lisandropat.com))
+Lisandro Patiño ([@ottokoi](https://lisandropat.com))
