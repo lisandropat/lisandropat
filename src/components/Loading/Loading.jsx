@@ -2,11 +2,15 @@ import React from "react";
 
 import Layout from "../Layout/Layout";
 
-//import Logo from '../../images/pat-white.svg';
-
 import '../../styles/loading/loading.scss';
 
 // TODO: Custom spinner.
+
+/*
+    In this case, Gatsby's prerender would make my loading page useless. 
+    I crafted this component just in case the 3D model requires some seconds to load.
+    In that case, I would need this to be functional and to have an outro animation.
+*/
 
 const Loading = () => (
     <Layout 

@@ -4,7 +4,10 @@ nav {
     .logo {
         &:hover {
             .home {
-                div { opacity: 1; transition-delay: .2s; }
+                div { 
+                    opacity: 1; 
+                    transition-delay: .2s; 
+                }
                 &::before {
                     top: 0;
                     transition-delay: 0s;

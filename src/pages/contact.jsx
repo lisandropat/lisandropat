@@ -5,11 +5,11 @@ import SEO from "../components/SEO/SEO";
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
 
-import '../styles/landing/landing.scss';
+import '../styles/contact/contact.scss';
 
-const Index = () => (
+const Contact = () => (
   <Layout 
-    pageName="landing"
+    pageName="contact"
     cursorColor="255, 154, 133"
   >
     <SEO 
@@ -18,10 +18,10 @@ const Index = () => (
     />
     <Header />
     <section>
-      Landing.
+      Contact.
     </section>
     <Footer />
   </Layout>
 )
 
-export default Index
+export default Contact
