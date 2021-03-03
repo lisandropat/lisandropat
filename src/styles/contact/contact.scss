@@ -4,4 +4,9 @@
     section {
         padding: 120px 70px;
     }
+    @media all and (max-width: 576px){
+        nav .menu { 
+            display: none;
+        }
+    }
 }
