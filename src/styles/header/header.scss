@@ -109,3 +109,28 @@ nav {
         }
     }
 }
+
+// Mix of https://dribbble.com/shots/14913714-Responsive-Web-Design-for-Eskafil and https://dribbble.com/shots/14594498-Uniform-Wares-Watch-Mobile-WIP-design
+
+// TODO: Modal needs it's own scss file with the defaults, then modified in mobile-header scss.
+
+.modal {
+    position: absolute;
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    background-color: $b;
+    top: 0;
+    color: $w;
+    .close {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        border: none;
+        background-color: transparent;
+        color: $w;
+        height: 48px;
+        width: 48px;
+        font-size: 36px;
+    }
+}

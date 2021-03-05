@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import MobileHeader from './MobileHeader';
+import { Menu } from '../Menu';
+
 import Logo from '../../images/pat.svg';
 
 import '../../styles/header/header.scss';
@@ -16,10 +19,9 @@ const Header = () => (
         </div>
       </Link>
       <div className="menu">
-        <Link to="/portfolio">Portfolio.</Link>
-        <Link to="/about">About.</Link>
-        <Link to="/contact">Contact.</Link>
+        <Menu />
       </div>
+      <MobileHeader />
   </nav>
 )
 
