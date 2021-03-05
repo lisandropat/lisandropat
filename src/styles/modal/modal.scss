@@ -1,0 +1,60 @@
+@import '../index.scss';
+
+// Mix of https://dribbble.com/shots/14913714-Responsive-Web-Design-for-Eskafil and https://dribbble.com/shots/14594498-Uniform-Wares-Watch-Mobile-WIP-design
+
+//.modal-button { }
+
+@media all and (max-width: 576px){
+    .modal {
+        position: absolute;
+        z-index: 100;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        color: $b;
+        .modal-overlay {
+            position: absolute;
+            z-index: 1;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba($color: $b, $alpha: .25);
+            top: 0;
+        }
+        .modal-content {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: auto;
+            max-height: 90vh;
+            max-width: 90vw;
+            min-height: 360px;
+            min-width: 320px;
+            background-color: $w;
+            border-radius: 20px;
+            box-shadow: 0px 5px 10px -5px rgba($b,.25);
+            -webkit-box-shadow: 0px 5px 10px -5px rgba($b,.25);
+            -moz-box-shadow: 0px 5px 10px -5px rgba($b,.25);
+            .modal-close {
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                border: none;
+                background-color: transparent;
+                color: $b;
+                height: 48px;
+                width: 48px;
+                font-size: 36px;
+            }
+            .modal-body { 
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                text-align: center;
+                transform: translate(-50%, -50%);
+                width: 80%;
+            }
+        }
+    }
+}

@@ -1,5 +1,7 @@
 @import '../index.scss';
 
+// TODO: Include animation for the black background in nav > .modal.
+
 nav {
     .logo {
         img {
@@ -66,6 +68,7 @@ nav {
             }
         }
     }
+    .modal-button, .modal { display: none; }
     @media all and (max-width: 1400px){
         .logo {
             img {
@@ -87,6 +90,10 @@ nav {
     }
     @media all and (max-width: 576px){
         .logo {
+            img {
+                top: 25px;
+                left: 20px;
+            }
             .home {
                 display: none;
             }
@@ -107,30 +114,58 @@ nav {
                 -moz-box-shadow: 0px 5px 10px -5px rgba($b,.25);
             }
         }
-    }
-}
-
-// Mix of https://dribbble.com/shots/14913714-Responsive-Web-Design-for-Eskafil and https://dribbble.com/shots/14594498-Uniform-Wares-Watch-Mobile-WIP-design
-
-// TODO: Modal needs it's own scss file with the defaults, then modified in mobile-header scss.
-
-.modal {
-    position: absolute;
-    z-index: 100;
-    height: 100vh;
-    width: 100vw;
-    background-color: $b;
-    top: 0;
-    color: $w;
-    .close {
-        position: absolute;
-        right: 30px;
-        top: 20px;
-        border: none;
-        background-color: transparent;
-        color: $w;
-        height: 48px;
-        width: 48px;
-        font-size: 36px;
+        .modal-button, .modal { display: block; }
+        .modal-button {
+            position: absolute;
+            text-align: right;
+            right: 20px;
+            top: 15px;
+            font-size: 36px;
+            height: 48px;
+            width: 48px;
+        }
+        .modal {
+            color: $w;
+            .modal-content {
+                top: 0;
+                left: 0;
+                transform: none;
+                height: 100vh;
+                width: 100vw;
+                max-height: initial;
+                max-width: initial;
+                min-height: initial;
+                min-width: initial;
+                background-color: $b;
+                border-radius: 0;
+                .modal-close {
+                    color: $w;
+                }
+                .modal-body { 
+                    top: initial;
+                    left: initial;
+                    right: 25px;
+                    bottom: 40px;
+                    text-align: right;
+                    transform: none;
+                    width: auto;
+                    .menu-options a, .menu-social a { display: block; }
+                    .menu-options {
+                        margin-bottom: 50px;
+                        a {
+                            font-size: 2.5rem;
+                            line-height: 1.6;
+                            color: $w;
+                        }
+                    }
+                    .menu-social {
+                        a {
+                            color: $p;
+                            line-height: 1.9;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
