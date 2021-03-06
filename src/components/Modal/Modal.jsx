@@ -1,18 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import { useAnimatePresence } from "use-animate-presence";
 
 import '../../styles/modal/modal.scss';
 
-const ToggleContent = ({ toggle, content }) => {
-  const [isShown, setIsShown] = useState(false);
-  const hide = () => setIsShown(false);
-  const show = () => setIsShown(true);
-
-  return (
-    <>
-      {toggle(show)}
-      {isShown && content(hide)}
-    </>
-  );
+const variants = {
+  y: { from: -800, to: 0 },
 };
 
 /* 
@@ -25,24 +17,50 @@ const Modal = ({ children, modalClassName, buttonModal }) => {
 
   const toggleClassName = modalClassName || "modal";
 
+  const animatedDiv = useAnimatePresence({
+    variants,
+    initial: "hidden",
+    options: {
+      stiffness: 100,
+      mass: 0.25,
+      damping: 12,
+    },
+  });
+
   return (
-  <ToggleContent
-      toggle={show => <div onClick={show} className="modal-button" onKeyDown={show} role="button" aria-label="Open" tabIndex={0}>{buttonModal}</div>}
-      content={hide => (
-        <div className={toggleClassName}>
-          <div className="modal-overlay" onClick={hide} onKeyDown={hide} role="button" aria-label="Open" tabIndex={0} />
+    <div>
+      <div 
+        onClick={() => animatedDiv.togglePresence()} 
+        onKeyDown={() => animatedDiv.togglePresence()} 
+        className="modal-button" 
+        role="button" 
+        aria-label="Open" 
+        tabIndex={0}
+      >
+        {buttonModal}
+      </div>
+      {animatedDiv.isRendered && 
+        <div className={toggleClassName} ref={animatedDiv.ref}>
+          <div 
+            className="modal-overlay" 
+            onClick={() => animatedDiv.togglePresence()} 
+            onKeyDown={() => animatedDiv.togglePresence()} 
+            role="button" 
+            aria-label="Open" 
+            tabIndex={0} 
+          />
           <div className="modal-content">
-            <button className="modal-close" onClick={hide}>
+            <button className="modal-close" onClick={() => animatedDiv.togglePresence()}>
               <i className="ri-close-fill" aria-label="Close menu" />
             </button>
-            <div className="modal-body" onClick={hide} onKeyDown={hide} role="button" aria-label="Open" tabIndex={0}>
+            <div className="modal-body" onClick={() => animatedDiv.togglePresence()} onKeyDown={() => animatedDiv.togglePresence()} role="button" aria-label="Open" tabIndex={0}>
               {children}
             </div>
           </div>
         </div>
-      )}
-    />
-  )
+      }
+    </div>
+  );
 }
 
 export default Modal
