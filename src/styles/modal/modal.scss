@@ -19,6 +19,9 @@
             width: 100vw;
             background-color: rgba($color: $b, $alpha: .25);
             top: 0;
+            // Animation
+            opacity: 0;
+            animation: fadeIn .2s ease-in-out 0s 1 normal forwards;
         }
         .modal-content {
             position: absolute;
@@ -36,6 +39,10 @@
             box-shadow: 0px 5px 10px -5px rgba($b,.25);
             -webkit-box-shadow: 0px 5px 10px -5px rgba($b,.25);
             -moz-box-shadow: 0px 5px 10px -5px rgba($b,.25);
+            // Animation
+            opacity: 0;
+            margin-top: -10%;
+            animation: fadeInTop .2s ease-in-out .1s 1 normal forwards;
             .modal-close {
                 position: absolute;
                 right: 10px;

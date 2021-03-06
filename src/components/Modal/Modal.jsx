@@ -32,7 +32,9 @@ const Modal = ({ children, modalClassName, buttonModal }) => {
         <div className={toggleClassName}>
           <div className="modal-overlay" onClick={hide} onKeyDown={hide} role="button" aria-label="Open" tabIndex={0} />
           <div className="modal-content">
-            <button onClick={hide} className="modal-close"><i className="ri-close-fill" aria-label="Close menu" /></button>
+            <button className="modal-close" onClick={hide}>
+              <i className="ri-close-fill" aria-label="Close menu" />
+            </button>
             <div className="modal-body" onClick={hide} onKeyDown={hide} role="button" aria-label="Open" tabIndex={0}>
               {children}
             </div>
