@@ -3,9 +3,9 @@ import { Link } from "gatsby";
 
 const Menu = () => (
     <>
-        <Link to="/portfolio">Portfolio.</Link>
-        <Link to="/about">About.</Link>
-        <Link to="/contact">Contact.</Link>
+        <Link to="/portfolio" activeClassName="active">Portfolio.</Link>
+        <Link to="/about" activeClassName="active">About.</Link>
+        <Link to="/contact" activeClassName="active">Contact.</Link>
     </>
 )
 

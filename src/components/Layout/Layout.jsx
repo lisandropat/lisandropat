@@ -4,7 +4,7 @@ import AnimatedCursor from "react-animated-cursor";
 import '../../styles/index.scss';
 
 // TODO: Re-do https://github.com/stephenscaff/react-animated-cursor component in order to include a border around the solid cursor.
-// TODO: Replace native scrollbar with a custom designed one and a smooth wheel experience.
+// TODO: Skew scroll with https://brad-carter.medium.com/how-to-add-smooth-skew-scrolling-in-react-dd0eddbc24a1
 
 const Layout = ({ children, pageName, cursorColor }) => (
   <main id={pageName}>

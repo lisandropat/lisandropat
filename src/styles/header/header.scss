@@ -1,7 +1,5 @@
 @import '../index.scss';
 
-// TODO: Include animation for the black background in nav > .modal.
-
 nav {
     .logo {
         img {
@@ -65,6 +63,24 @@ nav {
             &:hover {
                 color: $p;
                 filter: drop-shadow(0px 5px 10px $p);
+            }
+        }
+        .active {
+            position: relative;
+            display: inline-block;
+            &::before {
+                content: '';
+                position: absolute;
+                top: -9px;
+                left: -34%;
+                width: 160%;
+                height: 35px;
+                display: inline-block;
+                border: 1px solid rgba($b,.1);
+                border-radius: 60px;
+            }
+            &:hover {
+                &::before { border-color: rgba($p,.25) }
             }
         }
     }
@@ -165,6 +181,23 @@ nav {
                             font-size: 2.5rem;
                             line-height: 1.6;
                             color: $w;
+                        }
+                        .active {
+                            position: relative;
+                            color: $p;
+                            left: -60px;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                bottom: 18px;
+                                right: -110px;
+                                width: 100px;
+                                height: 5px;
+                                display: block;
+                                background-color: $p;
+                                border: none;
+                                border-radius: 5px;
+                            }
                         }
                     }
                     .menu-social {
