@@ -1,12 +1,12 @@
 @import '../index.scss';
 
-// Mix of https://dribbble.com/shots/14913714-Responsive-Web-Design-for-Eskafil and https://dribbble.com/shots/14594498-Uniform-Wares-Watch-Mobile-WIP-design
+// TODO: when .modal is open, then the overflow of body should be hidden.
 
 //.modal-button { }
 
 @media all and (max-width: 576px){
     .modal {
-        position: absolute;
+        position: fixed;
         z-index: 100;
         height: 100vh;
         width: 100vw;
