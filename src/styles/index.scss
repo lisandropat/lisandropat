@@ -9,17 +9,19 @@ $lg: #8a8f9b;
 $w: #FBFBFB;
 
 /*
-    This webpage IS NOT mobile first. I intentionally made it this way as 90% of the visits come from
-    notebooks and desk computers. Also SEO is not key, this webpage is purelly designed in order
-    to show up digital artistic skills.
+    I'm slowly transitioning this site to Chakra UI. At the moment, SCSS is used for the core design, and Chakra UI 
+    for frequently updated sections of the websites like blog posts.
 */
 
 html, body {
-    font-family: 'Poppins', sans-serif;
     color: $b;
     background-color: $w;
     overflow-x: hidden;
     overflow-y: overlay;
+}
+
+html, body, p, a, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
 }
 
 a { 

@@ -21,6 +21,7 @@ const config = {
     
     themeColor: "#E29E55",
     backgroundColor: "#FFFEFE",
+    blackColor: "#0F0F0F"
     
   };
   

@@ -71,8 +71,9 @@ nav {
             &::before {
                 content: '';
                 position: absolute;
-                top: -7px;
-                left: -34%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-52%, -50%);
                 width: 160%;
                 height: 35px;
                 display: inline-block;
@@ -84,7 +85,6 @@ nav {
             }
         }
     }
-    .modal-button, .modal { display: none; }
     @media all and (max-width: 1400px){
         .logo {
             img {
@@ -104,7 +104,7 @@ nav {
             }
         }
     }
-    @media all and (max-width: 576px){
+    @media all and (max-width: 991px){
         .logo {
             img {
                 top: 25px;
@@ -130,84 +130,50 @@ nav {
                 -moz-box-shadow: 0px 5px 10px -5px rgba($b,.25);
             }
         }
-        .modal-button, .modal { display: block; }
-        .modal-button {
-            position: absolute;
-            text-align: right;
-            right: 20px;
-            top: 10px;
-            font-size: 36px;
-            height: 48px;
-            width: 48px;
-        }
-        .modal {
+    }
+}
+
+// Mobile inner menu
+.menu-modal {
+    .menu-options a, .menu-social a { 
+        display: block; 
+        // Animation
+        opacity: 0;
+        animation: fadeIn .2s ease-in-out 0s 1 normal forwards;
+        &:nth-child(1) { animation-delay: .2s; }
+        &:nth-child(2) { animation-delay: .3s; }
+        &:nth-child(3) { animation-delay: .4s; }
+        &:nth-child(4) { animation-delay: .5s; }
+    }
+    .menu-options {
+        margin-bottom: 50px;
+        a {
+            font-size: 2.5rem;
+            line-height: 1.6;
             color: $w;
-            .modal-content {
-                top: 0;
-                left: 0;
-                transform: none;
-                height: 100vh;
-                width: 100vw;
-                max-height: initial;
-                max-width: initial;
-                min-height: initial;
-                min-width: initial;
-                background-color: $b;
-                border-radius: 0;
-                .modal-close {
-                    color: $w;
-                }
-                .modal-body { 
-                    top: initial;
-                    left: initial;
-                    right: 25px;
-                    bottom: 40px;
-                    text-align: right;
-                    transform: none;
-                    width: auto;
-                    .menu-options a, .menu-social a { 
-                        display: block; 
-                        // Animation
-                        opacity: 0;
-                        animation: fadeIn .2s ease-in-out 0s 1 normal forwards;
-                        &:nth-child(1) { animation-delay: .2s; }
-                        &:nth-child(2) { animation-delay: .3s; }
-                        &:nth-child(3) { animation-delay: .4s; }
-                        &:nth-child(4) { animation-delay: .5s; }
-                    }
-                    .menu-options {
-                        margin-bottom: 50px;
-                        a {
-                            font-size: 2.5rem;
-                            line-height: 1.6;
-                            color: $w;
-                        }
-                        .active {
-                            position: relative;
-                            color: $p;
-                            left: -60px;
-                            &::before {
-                                content: '';
-                                position: absolute;
-                                bottom: 18px;
-                                right: -110px;
-                                width: 100px;
-                                height: 5px;
-                                display: block;
-                                background-color: $p;
-                                border: none;
-                                border-radius: 5px;
-                            }
-                        }
-                    }
-                    .menu-social {
-                        a {
-                            color: rgba($w, .5);
-                            line-height: 1.9;
-                        }
-                    }
-                }
+        }
+        .active {
+            position: relative;
+            color: $p;
+            left: -60px;
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 18px;
+                right: -110px;
+                width: 100px;
+                height: 5px;
+                display: block;
+                background-color: $p;
+                border: none;
+                border-radius: 5px;
             }
+        }
+    }
+    .menu-social {
+        a {
+            color: rgba($w, .5);
+            line-height: 1.9;
         }
     }
 }
