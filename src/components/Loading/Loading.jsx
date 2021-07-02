@@ -15,7 +15,6 @@ import '../../styles/loading/loading.scss';
 const Loading = () => (
     <Layout 
         pageName="loading"
-        cursorColor="251, 251, 251"
     >   
         <section>
             <div className="spinner">

@@ -1,4 +1,5 @@
 import React from "react";
+import config from "../../data/SiteConfig";
 
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/SEO/SEO";
@@ -10,10 +11,9 @@ import '../styles/portfolio/portfolio.scss';
 const Portfolio = () => (
   <Layout 
     pageName="portfolio"
-    cursorColor="255, 154, 133"
   >
     <SEO 
-      title="Lisandro Pat"
+      title={`Portfolio ・ ${config.siteTitle}`}
       description="Hi, I'm an argentinian multidisciplinary designer living in Valencia, Spain. I elaborate branding, motion, 3D and web experiences."
     />
     <Header />

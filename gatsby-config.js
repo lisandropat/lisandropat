@@ -1,16 +1,19 @@
+const config = require("./data/SiteConfig");
+
 module.exports = {
   siteMetadata: {
-    title: `Lisandropat Visual Designer Portfolio`,
-    description: `Hi, I'm Lisandro, multidisciplinary digital artist with a solid background in multimedia design. Welcome to my portfolio.`,
-    author: `@ottokoi`,
+    title: config.siteTitle,
+    description: config.siteDescription,
+    author: `@${config.authorTwitter}`,
   },
   plugins: [
     `gatsby-plugin-sass`,
+    "@chakra-ui/gatsby-plugin",
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {
-        siteUrl: `https://lisandropat.com`,
+        siteUrl: config.siteUrl,
       },
     },
     {
@@ -25,11 +28,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Lisandropat Portfolio`,
-        short_name: `Lisandropat`,
-        start_url: `https://www.lisandropat.com`, // `/`
-        background_color: `#FF9A85`,
-        theme_color: `#FF9A85`,
+        name: config.siteTitle,
+        short_name: config.siteTitle,
+        start_url: config.siteUrl, // `/`
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
         display: `minimal-ui`,
         icon: `src/images/pat.png`, // This path is relative to the root of the site.
       },
@@ -37,7 +40,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: "#FF9A85",
+        color: config.themeColor,
         showSpinner: false,
       },
     },

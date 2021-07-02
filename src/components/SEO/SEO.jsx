@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import config from "../../../data/SiteConfig";
 
 const SEO = ({ title, description }) => {
   const schemaOrgJSONLD = {
@@ -7,17 +8,14 @@ const SEO = ({ title, description }) => {
     "@type": "Person",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Buenos Aires, Argentina",
-      "addressRegion": "BA",
-      "postalCode": "1414",
-      "streetAddress": "Av. Cnel Niceto Vega"
+      "addressLocality": config.authorLocation,
     },
-    "email": "mailto:contact@lisandropat.com",
+    "email": `mailto:${config.authorMail}`,
     "image": "image.png",
-    "jobTitle": "Visual designer",
-    "name": "Lisandro Pat",
-    "telephone": "(+549) 1125300099",
-    "url": "https://lisandropat.com/"
+    "jobTitle": config.authorJob,
+    "name": config.siteTitle,
+    "telephone": config.authorNumber,
+    "url": config.siteUrl
   }
   return (
     <Helmet>

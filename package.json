@@ -5,6 +5,11 @@
   "version": "0.1.0",
   "author": "Lisandro Pat <lisandropat@gmail.com>",
   "dependencies": {
+    "@chakra-ui/gatsby-plugin": "^2.0.1",
+    "@chakra-ui/react": "^1.6.4",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "framer-motion": "^4.1.17",
     "gatsby": "^2.32.8",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-manifest": "^2.6.1",
