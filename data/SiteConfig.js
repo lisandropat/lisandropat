@@ -10,6 +10,7 @@ const config = {
 
     authorTwitter: "ottokoi",
     authorInstagram: "lisandropat",
+    authorYouTube: "https://www.youtube.com/channel/UCdNC28FzPuwCunlXemYYOWw",
 
     authorMail: "contact@lisandropat.com",
     authorNumber: "+5491125300099",
