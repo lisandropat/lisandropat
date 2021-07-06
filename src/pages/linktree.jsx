@@ -122,6 +122,11 @@ const Linktree = () => (
         link="https://lisandropat.com"
         icon="ri-edit-line"
       />
+      {/*<LinktreeButton 
+        linkName="Blog de tecnología"
+        link="https://travelxtech.com"
+        icon="ri-usb-line"
+      />*/}
       <LinktreeButton 
         linkName="Vegan blog"
         link="https://julsita.com"
@@ -132,12 +137,12 @@ const Linktree = () => (
       >
         <SmallLinktreeButton
           linkName="Último video de YouTube"
-          link="https://www.youtube.com/watch?v=vaAYftAJWkA"
+          link={config.lastYouTubeVideo}
           badge="Nuevo"
         />
         <SmallLinktreeButton
-          linkName="ECOSIA, planta árboles desde casa"
-          link="https://www.ecosia.org/"
+          linkName="Discord Server"
+          link="https://discord.com/invite/FW8Qgdu"
         />
       </Box>
     </Box>

@@ -12,6 +12,8 @@ const config = {
     authorInstagram: "lisandropat",
     authorYouTube: "https://www.youtube.com/channel/UCdNC28FzPuwCunlXemYYOWw",
 
+    lastYouTubeVideo: "https://www.youtube.com/watch?v=vaAYftAJWkA",
+
     authorMail: "contact@lisandropat.com",
     authorNumber: "+5491125300099",
     authorLocation: "Buenos Aires, Argentina",
