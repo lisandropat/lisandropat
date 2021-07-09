@@ -22,9 +22,9 @@ const MobileHeader = () => {
     <>
       <Button ref={btnRef} onClick={onOpen}
         position="absolute"
-        right="20px"
-        top="10px"
-        fontSize="36px"
+        right="32px"
+        top="12px"
+        fontSize="42px"
         h="48px"
         w="48px"
         background="transparent"

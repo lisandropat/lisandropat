@@ -22,7 +22,7 @@ const config = {
   
     /* Colors */
     
-    themeColor: "#E29E55",
+    themeColor: "#F62459",
     backgroundColor: "#FFFEFE",
     blackColor: "#0F0F0F"
     

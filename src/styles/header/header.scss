@@ -1,69 +1,43 @@
 @import '../index.scss';
 
-nav {
-    .logo {
-        img {
-            position: absolute;
-            z-index: 10;
-            top: 25px;
-            left: 32px;
-            width: 60px;
-        }
-        .home {
-            position: absolute;
-            z-index: 11;
-            top: 20px;
-            left: 65px;
-            padding-left: 5px;
-            min-width: 70px;
-            min-height: 30px;
-            div {
-                transition: .2s;
-                opacity: 0;
-                color: $p;
-                font-weight: 500;
+.logo {
+    &:hover {
+        .back-to-home {
+            .back-to-home-text { 
+                opacity: 1; 
+                transition-delay: .1s; 
             }
             &::before {
-                content: '';
-                position: absolute;
-                z-index: -1;
-                background-color: $w;
-                display: block;
-                width: 70px;
-                height: 30px;
-                top: -50px;
-                transition: .2s;
-                transition-delay: .2s;
-            }
-        }
-        &:hover {
-            .home {
-                div { 
-                    opacity: 1; 
-                    transition-delay: .2s; 
-                }
-                &::before {
-                    top: 0;
-                    transition-delay: 0s;
-                }
+                top: 0;
+                transition-delay: 0s;
             }
         }
     }
+}
+
+nav {
     .menu {
         position: absolute;
         top: 20px;
         right: 42px;
         user-select: none;
         a {
-            margin-left: 50px;
-            color: $g;
+            margin-left: 40px;
+            color: $b;
             font-weight: 500;
-            font-size: 86%;
-            line-height: 1.5;
+            font-size: 16px;
             &:hover {
                 color: $p;
-                filter: drop-shadow(0px 5px 10px rgba($p, .5));
+                filter: drop-shadow(0px 5px 10px rgba($p, .25));
             }
+            &:nth-child(4) { margin-left: 40px;}
+        }
+        .social-link {
+            position: relative;
+            top: 3px;
+            color: $g;
+            margin-left: 20px;
+            &:first-child { margin-left: 40px; }
         }
         .active {
             position: relative;
@@ -73,48 +47,24 @@ nav {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-52%, -50%);
-                width: 160%;
-                height: 35px;
+                transform: translate(-50%, -50%);
+                width: 170%;
+                height: 36px;
                 display: inline-block;
-                border: 1px solid rgba($b,.1);
-                border-radius: 60px;
+                border: 1px solid $lg;
+                border-radius: 16px;
             }
             &:hover {
                 &::before { border-color: rgba($p,.25) }
             }
         }
     }
-    @media all and (max-width: 1400px){
-        .logo {
-            img {
-                top: 35px;
-                left: 30px;
-            }
-            .home {
-                top: 30px;
-                left: 25px;
-            }
-        }
-        .menu {
-            top: 30px;
-            right: 30px;
-            a {
-                margin-left: 40px;
-            }
-        }
-    }
     @media all and (max-width: 991px){
-        .logo {
-            img {
-                top: 25px;
-                left: 20px;
-            }
-            .home {
-                display: none;
-            }
-        }
         .menu { 
+            display: none;
+            /*
+            Floating contact button.
+
             position: fixed;
             top: initial;
             right: 30px;
@@ -128,7 +78,7 @@ nav {
                 box-shadow: 0px 5px 10px -5px rgba($b,.25);
                 -webkit-box-shadow: 0px 5px 10px -5px rgba($b,.25);
                 -moz-box-shadow: 0px 5px 10px -5px rgba($b,.25);
-            }
+            }*/
         }
     }
 }

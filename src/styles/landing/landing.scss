@@ -2,12 +2,7 @@
 
 #landing {
     overflow: hidden;
-    nav .logo {
-        &:hover {
-            .home {
-                div { opacity: 0; }
-                &::before { top: -50px; }
-            }
-        }
+    .back-to-home {
+        display: none !important;
     }
 }

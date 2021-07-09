@@ -1,12 +1,12 @@
 @import './reset.scss';
 @import './scrollbar.scss';
 
-$p: #E29E55;
+$p: #F62459;
 
-$b: #101010;
-$g: #162638;
-$lg: #8a8f9b;
-$w: #FBFBFB;
+$b: #0F0F0F;
+$g: #76818D;
+$lg: #DDE3EA;
+$w: #FFFEFE;
 
 /*
     I'm slowly transitioning this site to Chakra UI. At the moment, SCSS is used for the core design, and Chakra UI 
@@ -21,7 +21,7 @@ html, body {
 }
 
 html, body, p, a, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     /*
         font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, Roboto,
         Ubuntu, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
