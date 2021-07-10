@@ -51,6 +51,7 @@ const SEO = ({ title, description }) => {
 
       <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet dns-prefetch" />
+      <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet dns-prefetch" />
       
       <link href="//cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet dns-prefetch" />
 

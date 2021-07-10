@@ -24,7 +24,9 @@ const config = {
     
     themeColor: "#F62459",
     backgroundColor: "#FFFEFE",
-    blackColor: "#0F0F0F"
+    blackColor: "#0F0F0F",
+    grayColor: "#76818D",
+    darkgrayColor: "#575D64"
     
   };
   

@@ -13,13 +13,19 @@ import { Menu, SocialMenu } from '../Menu';
 import '../../styles/header/header.scss';
 
 const Header = () => (
-  <Box as="nav">
+  <Box as="nav" textAlign="center">
+    <Box
+      maxWidth="1440px"
+      padding="0 10px"
+      position="relative"
+      margin="0 auto"
+    >
       <Link to="/" className="logo">
         <Heading as="h1"
           position="absolute"
           zIndex={10}
           top="25px"
-          left={{ base: "26px", lg: "40px" }}
+          left={{ base: "26px", lg: "36px" }}
           fontSize="18px"
         >
           Lisandro <Box display="inline-block" w="18px" h="3px" background={config.blackColor} m="0 6px 4px 6px" /> Pat
@@ -59,7 +65,8 @@ const Header = () => (
         <Menu />
         <SocialMenu />
       </div>
-      <MobileHeader />
+    </Box>
+    <MobileHeader />
   </Box>
 )
 
