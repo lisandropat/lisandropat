@@ -49,7 +49,7 @@ main {
 
 .spotlight {
   .spotlight-element {
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
   }
   &:hover .spotlight-element:not(:hover) { 
     opacity: .75;

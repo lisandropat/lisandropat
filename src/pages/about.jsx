@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import config, { authorInstagram } from "../../data/SiteConfig";
+import config from "../../data/SiteConfig";
 
 import {
   Flex,
@@ -30,7 +30,7 @@ const About = ({ data: { allInstaNode } }) => (
     />
     <Header />
     <Box textAlign="center">
-      <Box maxWidth="1390px" padding={{ base: "0 20px", xl: '0' }} margin="0 auto">
+      <Box maxWidth="1390px" padding={{ base: "0 20px", '2xl': '0' }} margin="0 auto">
         <Box
           padding="2px 0 80px 0"
           margin="0 auto"
@@ -156,15 +156,14 @@ const About = ({ data: { allInstaNode } }) => (
                 transform: "scaleX(3)"
               }}
             >
-              Some <a href={`https://instagram.com/${authorInstagram}`} target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>Instagram</a> posts
+              Some <a href={`https://instagram.com/${config.authorInstagram}`} target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>Instagram</a> posts
             </Heading>
           </Flex>
         </Box>
       </Box>
-      <Box maxWidth="1390px" padding={{ base: "0 20px", xl: '0' }} margin="0 auto">
+      <Box maxWidth="1390px" padding={{ base: "0 20px", '2xl': '0' }} margin="0 auto">
         <Box
           padding="2px 0 80px 0"
-          margin="0 auto"
         >
           <InstagramPosts nodes={allInstaNode} />
         </Box>
@@ -176,7 +175,7 @@ const About = ({ data: { allInstaNode } }) => (
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allInstaNode(sort: {order: DESC, fields: timestamp}, limit: 2) {
+    allInstaNode(sort: {order: DESC, fields: timestamp}, limit: 4) {
         edges {
             node {
                 id

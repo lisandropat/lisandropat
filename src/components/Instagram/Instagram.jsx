@@ -4,48 +4,42 @@ import config from "../../../data/SiteConfig";
 import Img from "gatsby-image";
 
 import {
-  Flex,
-  Box,
+  SimpleGrid,
   Link
 } from '@chakra-ui/react';
 
 import '../../styles/index.scss';
 
 const Node = ({ node }) => (
-    <Link href={`https://www.instagram.com/p/${node.id}/`} target="_blank">
-        <Box
-            backgroundColor={config.blackColor}
-            /*backgroundPosition="center"
-            backgroundSize="cover"
-            backgroundImage={`url("${node.localFile.url}")`}*/
-            h={{ base: "260px", lg: "720px" }}
-            borderRadius="40px"
-            w={{ base: "45vw", lg: "47.5vw" }}
-            overflow="hidden"
-        >
-            <Img 
-                fluid={node.localFile.childImageSharp.fluid} 
-                imgStyle={{objectFit: 'cover'}} 
-                style={{ minHeight: '100%' }}
-            />
-        </Box>
+    <Link 
+        href={`https://www.instagram.com/p/${node.id}/`} 
+        target="_blank"
+        backgroundColor={config.blackColor}
+        borderRadius="40px"
+        overflow="hidden"
+        width="auto"
+        height="400px"
+        className="spotlight-element"
+    >
+        <Img 
+            fluid={node.localFile.childImageSharp.fluid} 
+            imgStyle={{ objectFit: 'cover' }} 
+            style={{ minHeight: '100%' }}
+        />
     </Link>
 )
 
 export const InstagramPosts = ({ nodes }) => {
     return (
-        <Flex  
-            justifyContent="space-between"
-            //display={{ base: 'initial', lg: 'flex' }}
+        <SimpleGrid  
+            w="100%"
+            spacing="24px"
+            columns={{ base: '2', xl: '4' }}
             className="spotlight"
         >
             {nodes.edges.map(instagram => (
-                <Box
-                    className="spotlight-element"
-                >
-                    <Node key={instagram.node.id} node={instagram.node} />
-                </Box>
+                <Node key={instagram.node.id} node={instagram.node} />
             ))}
-        </Flex>
+        </SimpleGrid>
     )
 }
