@@ -20,6 +20,7 @@ const LinktreeButton = ({ link, icon, linkName }) => {
       <Button 
         w="90%"
         h="56px"
+        paddingBottom="6px"
         margin="16px 5%"
         display="block"
         border={`1px solid rgba(255,255,255,.25)`}
@@ -59,6 +60,7 @@ const SmallLinktreeButton = ({ link, linkName, badge }) => {
         fontWeight={600}
         fontSize='.875rem'
         mt="7px"
+        transition=".2s"
         _hover={{
           color: config.themeColor
         }}
@@ -104,7 +106,7 @@ const Linktree = () => (
       <Image 
         src={Logo} 
         alt={config.siteTitleShort}
-        w="120px"
+        w="50px"
         m="0 auto 40px auto"
       />
       <LinktreeButton 

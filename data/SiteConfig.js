@@ -1,6 +1,6 @@
 const config = {
     siteTitle: "Lisandro Pat",
-    siteDescription: "Hi, I'm an argentinian multidisciplinary designer living in Valencia, Spain. I elaborate interfaces, motion, 3D, and AR experiences.",
+    siteDescription: "Hi, I'm an argentinian multidisciplinary designer living around the world. I elaborate interfaces, motion, 3D, and AR experiences.",
     siteUrl: "https://lisandropat.com",
 
     behanceProfile: "https://www.behance.net/lisandropat",
@@ -26,7 +26,8 @@ const config = {
     backgroundColor: "#FFFEFE",
     blackColor: "#0F0F0F",
     grayColor: "#76818D",
-    darkgrayColor: "#575D64"
+    darkgrayColor: "#575D64",
+    lightgrayColor: "#DDE3EA"
     
   };
   

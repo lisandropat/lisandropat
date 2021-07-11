@@ -38,4 +38,36 @@ main {
     background-color: $w;
 }
 
+.belong-to-the-wild {
+    transform: rotate(-10deg);
+    font-family: 'Reenie Beanie', cursive;
+    font-weight: 400;
+    font-size: 36px;
+    color: $p;
+    white-space: nowrap;
+}
+
+.circle {
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    text { font-weight: bold; text-transform: uppercase; }
+
+}
+
+#small-circle { 
+    height: 300px;
+    text { font-size: 16px; }
+}
+
+#big-circle { 
+    height: 500px;
+    text { font-size: 12px; }
+}
+
 @import './animations.scss';
