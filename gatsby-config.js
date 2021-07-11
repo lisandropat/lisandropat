@@ -44,6 +44,12 @@ module.exports = {
         showSpinner: false,
       },
     },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `446560615`,
+      },
+    },
     `gatsby-plugin-offline` // Enables Progressive Web App + Offline functionality, visit: https://gatsby.dev/offline
   ],
 }
