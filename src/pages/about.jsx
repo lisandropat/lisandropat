@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import config, { authorInstagram } from "../../data/SiteConfig";
 
 import {
@@ -12,16 +12,17 @@ import {
 
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/SEO/SEO";
-import Header from "../components/Header/Header"
-import Footer from "../components/Footer/Footer"
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 import Button from '../components/Button/Button';
 
 import CircleText from '../components/CircleText/CircleText';
+import { InstagramPosts } from '../components/Instagram/Instagram';
 
 import Profile from '../images/lisandro.jpeg';
 
-const About = () => (
+const About = ({ data: { allInstaNode } }) => (
   <Layout>
     <SEO 
       title={`About me ・ ${config.siteTitle}`}
@@ -126,7 +127,7 @@ const About = () => (
               <a href={`https://twitter.com/${config.authorTwitter}`} target="_blank" rel="noopener noreferrer">
                 <Text as="i" className="ri-twitter-fill" fontSize="18px" color={config.grayColor} transition=".2s" _hover={{ color: config.themeColor }} />
               </a>
-              <a href={`https://twitter.com/${config.authorInstagram}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://instagram.com/${config.authorInstagram}`} target="_blank" rel="noopener noreferrer">
                 <Text as="i" className="ri-instagram-line" fontSize="18px" color={config.grayColor} transition=".2s" _hover={{ color: config.themeColor }} />
               </a>
               <a href={config.behanceProfile} target="_blank" rel="noopener noreferrer">
@@ -165,34 +166,31 @@ const About = () => (
           padding="2px 0 80px 0"
           margin="0 auto"
         >
-          <Flex  
-            justifyContent="space-between"
-            //display={{ base: 'initial', lg: 'flex' }}
-          >
-            <Box
-              backgroundColor={config.blackColor}
-              backgroundPosition="center"
-              backgroundSize="cover"
-              backgroundImage={Profile}
-              h={{ base: "260px", lg: "720px" }}
-              borderRadius="40px"
-              w="49%"
-            />
-            <Box
-              backgroundColor={config.blackColor}
-              backgroundPosition="center"
-              backgroundSize="cover"
-              backgroundImage={Profile}
-              h={{ base: "260px", lg: "720px" }}
-              borderRadius="40px"
-              w="49%"
-            />
-          </Flex>
+          <InstagramPosts nodes={allInstaNode} />
         </Box>
       </Box>
     </Box>
     <Footer />
   </Layout>
 )
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    allInstaNode(sort: {order: DESC, fields: timestamp}, limit: 2) {
+        edges {
+            node {
+                id
+                localFile {
+                  childImageSharp {
+                    fluid(quality: 70) {
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+            }
+        }
+    }
+  }
+`
 
 export default About

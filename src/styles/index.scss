@@ -47,6 +47,15 @@ main {
     white-space: nowrap;
 }
 
+.spotlight {
+  .spotlight-element {
+    transition: all .1s ease-in-out;
+  }
+  &:hover .spotlight-element:not(:hover) { 
+    opacity: .75;
+  }
+}
+
 .circle {
     position: absolute; 
     left: 0; 
