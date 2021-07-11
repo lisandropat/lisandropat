@@ -41,19 +41,23 @@ const About = () => (
           >
             <Box
               backgroundColor={config.blackColor}
+              backgroundPosition="center"
+              backgroundSize="cover"
               backgroundImage={Profile}
               h={{ base: "400px", lg: "800px" }}
               borderRadius="40px"
-              w="50%"
+              w={{ lg: "50%" }}
+              mt={{ base: "70px", lg: '0' }}
             />
             <Box
               textAlign="left"
             >
               <Box 
-                ml="60px" 
+                ml={{ lg: "60px" }} 
                 maxWidth="450px"
+                mt={{ base: "30px", lg: '0' }}
               >
-                <Heading as="h2" fontSize="36px" letterSpacing="-1px" lineHeight="50px">
+                <Heading as="h2" fontSize={{ base: "24px", lg: "36px" }} letterSpacing="-1px" lineHeight={{ lg: "50px" }}>
                   “Every project starts with an even better story”
                 </Heading>
                 <Text color={config.darkgrayColor} mt="40px">
@@ -78,62 +82,44 @@ const About = () => (
             alignItems="center" 
             mt="80px" 
             justifyContent="space-between"
+            display={{ base: 'initial', lg: 'flex' }}
           >
             <Box
               position="relative"
               textAlign="left"
-              maxWidth="440px"
-              fontSize="24px"
+              maxWidth={{ base: '500px', lg: "440px" }}
+              fontSize={{ base: "21px", lg: "24px" }}
               fontWeight="600"
               letterSpacing="-1px"
-              lineHeight="34px" 
+              lineHeight={{ base: "28px", lg: "34px" }}
               flex="1"
             >
               <Text
                 position="absolute"
-                fontSize="152px"
-                left="-50px"
+                fontSize={{ base: "124px", lg: "152px" }}
+                left={{ base: "-30px", lg: "-50px" }}
                 fontStyle="italic"
                 userSelect="none"
               >
                 "
               </Text>
               <Text>
-                I believe in tech’s protential to improve the world. My goal is to leave my print with revolutionary projects that have a huge impact on transforming Earth into a sustainable place, safer for all living beings.
+                I believe in tech’s potential to improve the world. My goal is to leave my print with revolutionary projects that have a huge impact on transforming Earth into a sustainable place, safer for all living beings.
               </Text>
               <Text mt="40px">
-                I love working remotely from anywhere in the world, meeting friendly teams and going out for usability tests - <Text as="i" className="belong-to-the-wild" position="relative" top="6px">I belong to the wild.</Text>
+                I love working remotely from anywhere in the world, meeting friendly teams and going out for usability tests - <Text as="i" className="belong-to-the-wild" position="relative" top={{ base: "10px", lg: "6px" }}>I belong to the wild.</Text>
               </Text>
             </Box>
-            <Box flex="1" maxWidth="500px">
+            <Box flex="1" maxWidth="500px" maxHeight={{ base: "400px", lg: "500px" }} mt={{ base: "-60px", lg: '0' }}>
               <CircleText big text="Click here and say hi, promise I won't bite :)" link="mailto:contact@lisandropat.com" />
             </Box>
           </Flex>
           <Flex
             justifyContent="space-between"
+            flexDirection="row-reverse"
+            display={{ base: 'initial', lg: 'flex' }}
           >
-            <Heading as="h3"
-              position="relative"
-              textAlign="left"
-              margin="80px 0 60px 0"
-              paddingLeft="26px"
-              fontSize="14px"
-              color={config.grayColor}
-              fontWeight={400}
-              _before={{
-                content: '"-"',
-                position: 'absolute',
-                left: '5px',
-                top: 0,
-                transform: "scaleX(3)"
-              }}
-            >
-              Some <a href={`https://instagram.com/${authorInstagram}`} target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>Instagram</a> posts
-            </Heading>
-            <HStack spacing="16px"
-              margin={{ base: "10px auto 0 auto", lg: '0' }}
-              w={{ base: "220px", lg: 'auto' }}
-            >
+            <HStack spacing="16px">
               <a href={config.authorYouTube} target="_blank" rel="noopener noreferrer">
                 <Text as="i" className="ri-youtube-fill" fontSize="18px" color={config.grayColor} transition=".2s" _hover={{ color: config.themeColor }} />
               </a>
@@ -153,6 +139,24 @@ const About = () => (
                 <Text as="i" className="ri-linkedin-fill" fontSize="18px" color={config.grayColor} transition=".2s" _hover={{ color: config.themeColor }} />
               </a>
             </HStack>
+            <Heading as="h3"
+              position="relative"
+              textAlign="left"
+              margin={{ base: "20px 0 60px 0", lg: "80px 0 60px 0" }}
+              paddingLeft="26px"
+              fontSize="14px"
+              color={config.grayColor}
+              fontWeight={400}
+              _before={{
+                content: '"-"',
+                position: 'absolute',
+                left: '5px',
+                top: 0,
+                transform: "scaleX(3)"
+              }}
+            >
+              Some <a href={`https://instagram.com/${authorInstagram}`} target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>Instagram</a> posts
+            </Heading>
           </Flex>
         </Box>
       </Box>
@@ -163,19 +167,23 @@ const About = () => (
         >
           <Flex  
             justifyContent="space-between"
-            display={{ base: 'initial', lg: 'flex' }}
+            //display={{ base: 'initial', lg: 'flex' }}
           >
             <Box
               backgroundColor={config.blackColor}
+              backgroundPosition="center"
+              backgroundSize="cover"
               backgroundImage={Profile}
-              h={{ base: "400px", lg: "800px" }}
+              h={{ base: "260px", lg: "720px" }}
               borderRadius="40px"
               w="49%"
             />
             <Box
               backgroundColor={config.blackColor}
+              backgroundPosition="center"
+              backgroundSize="cover"
               backgroundImage={Profile}
-              h={{ base: "400px", lg: "800px" }}
+              h={{ base: "260px", lg: "720px" }}
               borderRadius="40px"
               w="49%"
             />
