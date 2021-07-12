@@ -18,6 +18,7 @@ import CircleText from '../components/CircleText/CircleText';
 
 const Portfolio = () => (
   <Layout>
+    {/* eslint-disable-next-line */}
     <SEO 
       title={`Portfolio ・ ${config.siteTitle}`}
       description="Hi, I'm an argentinian multidisciplinary designer living in Valencia, Spain. I elaborate branding, motion, 3D and web experiences."

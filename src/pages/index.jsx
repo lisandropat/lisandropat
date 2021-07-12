@@ -14,6 +14,8 @@ import SEO from "../components/SEO/SEO";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
+import { FirstProject, SecondProject } from "../components/IndexProjects"
+
 import Tag from '../components/Tag/Tag';
 import Button from '../components/Button/Button';
 
@@ -25,6 +27,7 @@ const Index = () => (
   <Layout 
     pageName="landing"
   >
+    {/* eslint-disable-next-line */}
     <SEO 
       title={config.siteTitle}
       description={config.siteDescription}
@@ -73,7 +76,11 @@ const Index = () => (
               h={{ base: "400px", lg: "600px" }}
               borderRadius="40px"
               minWidth={{ lg: "500px" }}
-            />
+              position="relative"
+              overflow="hidden"
+            >
+              <FirstProject />
+            </Box>
           </Link>
           <Box textAlign="left" margin={{ base: "40px auto 80px auto", lg: '0' }}>
             <Heading as="h4" 
@@ -122,7 +129,11 @@ const Index = () => (
               h={{ base: "400px", lg: "600px" }}
               borderRadius="40px"
               minWidth={{ lg: "500px" }}
-            />
+              position="relative"
+              overflow="hidden"
+            >
+              <SecondProject />
+            </Box>
           </Link>
           <Box textAlign="left" flex="2" margin={{ base: "40px auto 80px auto", lg: '0 0 0 100px' }}>
             <Heading as="h4" 

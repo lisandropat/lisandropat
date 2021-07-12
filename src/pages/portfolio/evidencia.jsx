@@ -19,6 +19,7 @@ const Evidencia = () => (
   <Layout
     pageName="case-study"
   >
+    {/* eslint-disable-next-line */}
     <SEO 
       title={`Evidencia by ${config.siteTitle}`}
       description="Hi, I'm an argentinian multidisciplinary designer living in Valencia, Spain. I elaborate branding, motion, 3D and web experiences."
