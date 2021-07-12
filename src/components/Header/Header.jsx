@@ -1,5 +1,4 @@
 import React from "react";
-import config from "../../../data/SiteConfig";
 import { Link } from "gatsby";
 
 import {
@@ -28,7 +27,7 @@ const Header = () => (
           left={{ base: "26px", lg: "36px" }}
           fontSize="18px"
         >
-          Lisandro <Box display="inline-block" w="18px" h="3px" background={config.blackColor} m="0 6px 4px 6px" /> Pat
+          Lisandro <Box display="inline-block" w="18px" h="3px" className="logo-line" m="0 6px 4px 6px" /> Pat
         </Heading>
         <Box
           position="absolute"
@@ -41,7 +40,6 @@ const Header = () => (
             content: '""',
             zIndex: "-1",
             position: 'absolute',
-            backgroundColor: config.backgroundColor,
             display: 'block',
             width: '200px',
             height: '30px',
@@ -53,7 +51,6 @@ const Header = () => (
           <Box
             transition=".2s"
             opacity="0"
-            color={config.themeColor}
             fontWeight={500}
             className="back-to-home-text"
           >

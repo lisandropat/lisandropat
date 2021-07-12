@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'gatsby';
 import config from "../../data/SiteConfig";
 
 import {
@@ -52,114 +53,122 @@ const Portfolio = () => (
           columns={{ base: '1', xl: '2' }}
           className="spotlight"
         >
-          <Box
-            backgroundColor={config.blackColor}
-            h={{ base: "400px", lg: "540px" }}
-            borderRadius="40px"
-            w="auto"
-            className="spotlight-element"
-            textAlign="center"
-            role="group"
-            overflow="hidden"
-          >
+          <Link to="/portfolio/evidencia">
             <Box
-              fontSize="36px"
-              letterSpacing="-1px"
-              lineHeight={{ base: "400px", lg: "540px" }}
-              color="white"
-              fontWeight="700"
-              backgroundColor="rgba(0,0,0,.25)"
-              padding="0 21px"
-              opacity="0"
-              transition=".5s"
-              _groupHover={{
-                opacity: 1
-              }}
+              backgroundColor={config.blackColor}
+              h={{ base: "400px", lg: "540px" }}
+              borderRadius="40px"
+              w="auto"
+              className="spotlight-element"
+              textAlign="center"
+              role="group"
+              overflow="hidden"
             >
-              Evidencia
+              <Box
+                fontSize="36px"
+                letterSpacing="-1px"
+                lineHeight={{ base: "400px", lg: "540px" }}
+                color="white"
+                fontWeight="700"
+                backgroundColor="rgba(0,0,0,.25)"
+                padding="0 21px"
+                opacity="0"
+                transition=".5s"
+                _groupHover={{
+                  opacity: 1
+                }}
+              >
+                Evidencia
+              </Box>
             </Box>
-          </Box>
-          <Box
-            backgroundColor={config.blackColor}
-            h={{ base: "400px", lg: "540px" }}
-            borderRadius="40px"
-            w="auto"
-            className="spotlight-element"
-            textAlign="center"
-            role="group"
-            overflow="hidden"
-          >
+          </Link>
+          <Link to="/portfolio/zala">
             <Box
-              fontSize="36px"
-              letterSpacing="-1px"
-              lineHeight={{ base: "400px", lg: "540px" }}
-              color="white"
-              fontWeight="700"
-              backgroundColor="rgba(0,0,0,.25)"
-              padding="0 21px"
-              opacity="0"
-              transition=".5s"
-              _groupHover={{
-                opacity: 1
-              }}
+              backgroundColor={config.blackColor}
+              h={{ base: "400px", lg: "540px" }}
+              borderRadius="40px"
+              w="auto"
+              className="spotlight-element"
+              textAlign="center"
+              role="group"
+              overflow="hidden"
             >
-              Zala
+              <Box
+                fontSize="36px"
+                letterSpacing="-1px"
+                lineHeight={{ base: "400px", lg: "540px" }}
+                color="white"
+                fontWeight="700"
+                backgroundColor="rgba(0,0,0,.25)"
+                padding="0 21px"
+                opacity="0"
+                transition=".5s"
+                _groupHover={{
+                  opacity: 1
+                }}
+              >
+                Zala
+              </Box>
             </Box>
-          </Box>
-          <Box
-            backgroundColor={config.blackColor}
-            h={{ base: "400px", lg: "540px" }}
-            borderRadius="40px"
-            w="auto"
-            className="spotlight-element"
-            textAlign="center"
-            role="group"
-            overflow="hidden"
-          >
+          </Link>
+          <Link to="/portfolio/vozhero">
             <Box
-              fontSize="36px"
-              letterSpacing="-1px"
-              lineHeight={{ base: "400px", lg: "540px" }}
-              color="white"
-              fontWeight="700"
-              backgroundColor="rgba(0,0,0,.25)"
-              padding="0 21px"
-              opacity="0"
-              transition=".5s"
-              _groupHover={{
-                opacity: 1
-              }}
+              backgroundColor={config.blackColor}
+              h={{ base: "400px", lg: "540px" }}
+              borderRadius="40px"
+              w="auto"
+              className="spotlight-element"
+              textAlign="center"
+              role="group"
+              overflow="hidden"
             >
-              Vozhero
+              <Box
+                fontSize="36px"
+                letterSpacing="-1px"
+                lineHeight={{ base: "400px", lg: "540px" }}
+                color="white"
+                fontWeight="700"
+                backgroundColor="rgba(0,0,0,.25)"
+                padding="0 21px"
+                opacity="0"
+                transition=".5s"
+                _groupHover={{
+                  opacity: 1
+                }}
+              >
+                Vozhero
+              </Box>
             </Box>
-          </Box>
-          <Box
-            backgroundColor={config.blackColor}
-            h={{ base: "400px", lg: "540px" }}
-            borderRadius="40px"
-            w="auto"
-            className="spotlight-element"
-            textAlign="center"
-            role="group"
-            overflow="hidden"
-          >
+          </Link>
+          <Link to="/portfolio/gabriellac">
             <Box
-              fontSize="36px"
-              letterSpacing="-1px"
-              lineHeight={{ base: "400px", lg: "540px" }}
-              color="white"
-              fontWeight="700"
-              backgroundColor="rgba(0,0,0,.25)"
-              padding="0 21px"
-              opacity="0"
-              transition=".5s"
-              _groupHover={{
-                opacity: 1
-              }}
+              backgroundColor={config.blackColor}
+              h={{ base: "400px", lg: "540px" }}
+              borderRadius="40px"
+              w="auto"
+              className="spotlight-element"
+              textAlign="center"
+              role="group"
+              overflow="hidden"
             >
-              Gabriella C
+              <Box
+                fontSize="36px"
+                letterSpacing="-1px"
+                lineHeight={{ base: "400px", lg: "540px" }}
+                color="white"
+                fontWeight="700"
+                backgroundColor="rgba(0,0,0,.25)"
+                padding="0 21px"
+                opacity="0"
+                transition=".5s"
+                _groupHover={{
+                  opacity: 1
+                }}
+              >
+                Gabriella C
+              </Box>
             </Box>
-          </Box>
+          </Link>
         </SimpleGrid>
       </Box>
       <Box maxWidth="1100px" padding={{ base: "0 20px", xl: '0' }} margin="0 auto">

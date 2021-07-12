@@ -1,6 +1,13 @@
 @import '../index.scss';
 
 .logo {
+    .logo-line { background-color: $b; }
+    .back-to-home {
+        color: $p;
+        &:before {
+            background-color: $w;
+        }
+    }
     &:hover {
         .back-to-home {
             .back-to-home-text { 

@@ -39,6 +39,7 @@ const Footer = () => (
           src={Logo}
           w="32px"
           display={{ base: 'none', lg: 'initial' }}
+          className="footer-logo"
         />
         <HStack spacing="10px"
           margin={{ base: "10px auto 0 auto", lg: '0' }}

@@ -67,7 +67,7 @@ const Index = () => (
           flexDirection="row-reverse" 
           display={{ base: 'initial', lg: 'flex' }}
         >
-          <Link to="/">
+          <Link to="/portfolio/evidencia">
             <Box
               backgroundColor={config.blackColor}
               h={{ base: "400px", lg: "600px" }}
@@ -94,7 +94,7 @@ const Index = () => (
               <Tag text="UI Design" link="/portfolio" />
               <Tag text="Frontdev Dev" link="/portfolio" />
             </Box>
-            <Link to="/">
+            <Link to="/portfolio/evidencia">
               <Box color={config.themeColor} mt="10px"
                 role="group"
               >
@@ -116,7 +116,7 @@ const Index = () => (
           mt="80px" 
           display={{ base: 'initial', lg: 'flex' }}
         >
-          <Link to="/">
+          <Link to="/portfolio/zala">
             <Box
               backgroundColor={config.blackColor}
               h={{ base: "400px", lg: "600px" }}
@@ -142,7 +142,7 @@ const Index = () => (
               <Tag text="UX Design" link="/portfolio" />
               <Tag text="UI Design" link="/portfolio" />
             </Box>
-            <Link to="/">
+            <Link to="/portfolio/zala">
               <Box color={config.themeColor} mt="10px"
                 role="group"
               >
