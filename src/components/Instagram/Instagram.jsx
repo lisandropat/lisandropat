@@ -1,7 +1,7 @@
 import React from "react";
 import config from "../../../data/SiteConfig";
 
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import {
   SimpleGrid,
@@ -21,8 +21,8 @@ const Node = ({ node }) => (
         height="400px"
         className="spotlight-element"
     >
-        <Img 
-            fluid={node.localFile.childImageSharp.fluid} 
+        <GatsbyImage 
+            image={node.localFile.childImageSharp.gatsbyImageData} 
             imgStyle={{ objectFit: 'cover' }} 
             style={{ minHeight: '100%' }}
         />

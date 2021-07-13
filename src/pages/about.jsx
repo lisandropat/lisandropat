@@ -182,9 +182,11 @@ export const pageQuery = graphql`
                 id
                 localFile {
                   childImageSharp {
-                    fluid(quality: 70) {
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      placeholder: BLURRED
+                      formats: [AUTO, WEBP, AVIF]
+                      quality: 70
+                    )
                   }
                 }
             }

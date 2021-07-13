@@ -72,7 +72,6 @@ const Index = () => (
         >
           <Link to="/portfolio/evidencia">
             <Box
-              backgroundColor={config.blackColor}
               h={{ base: "400px", lg: "600px" }}
               borderRadius="40px"
               minWidth={{ lg: "500px" }}
@@ -125,7 +124,6 @@ const Index = () => (
         >
           <Link to="/portfolio/zala">
             <Box
-              backgroundColor={config.blackColor}
               h={{ base: "400px", lg: "600px" }}
               borderRadius="40px"
               minWidth={{ lg: "500px" }}

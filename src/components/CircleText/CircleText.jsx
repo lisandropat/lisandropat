@@ -11,7 +11,7 @@ import '../../styles/animations.scss';
 const CircleText = ({ text, link, big }) => {
     const heightSwitch = big ? '500px' : '300px';
     const idSwitch = big ? 'big' : 'small';
-    const textSwitch = big ? "230px" : "130px";
+    const textSwitch = big ? "220px" : "120px";
     return(
         <Box
             overflow="hidden"
