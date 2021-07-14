@@ -131,9 +131,9 @@ const About = ({ data: { allInstaNode } }) => (
               <a href={`https://instagram.com/${config.authorInstagram}`} target="_blank" rel="noopener noreferrer">
                 <Text as="i" className="ri-instagram-line" fontSize="18px" color={config.grayColor} transition=".2s" _hover={{ color: config.themeColor }} />
               </a>
-              <a href={config.behanceProfile} target="_blank" rel="noopener noreferrer">
+              {/*<a href={config.behanceProfile} target="_blank" rel="noopener noreferrer">
                 <Text as="i" className="ri-behance-fill" fontSize="18px" color={config.grayColor} transition=".2s" _hover={{ color: config.themeColor }} />
-              </a>
+              </a>*/}
               <a href={config.dribbbleProfile} target="_blank" rel="noopener noreferrer">
                 <Text as="i" className="ri-dribbble-line" fontSize="18px" color={config.grayColor} transition=".2s" _hover={{ color: config.themeColor }} />
               </a>

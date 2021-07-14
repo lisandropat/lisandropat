@@ -17,7 +17,7 @@ const SocialLink = ({ link, title }) => (
 
 const SocialMenu = () => (
     <>
-        <SocialLink link={config.behanceProfile} title="behance" />
+        {/*<SocialLink link={config.behanceProfile} title="behance" />*/}
         <SocialLink link={config.dribbbleProfile} title="dribbble" />
         <SocialLink link={config.linkedinProfile} title="linkedin" />
     </>
