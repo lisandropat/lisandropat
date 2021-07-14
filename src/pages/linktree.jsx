@@ -89,7 +89,7 @@ const Linktree = () => (
   <Layout>
     {/* eslint-disable-next-line */}
     <SEO 
-      title={`Linktree ・ ${config.siteTitle}`}
+      title={`Linktree — ${config.siteTitle}`}
       description="Links to all of my social profiles and YouTube videos made in spanish."
     />
     <Box
