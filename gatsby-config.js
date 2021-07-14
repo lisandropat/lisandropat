@@ -9,6 +9,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     "@chakra-ui/gatsby-plugin",
+    'gatsby-plugin-page-transitions',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
