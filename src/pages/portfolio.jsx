@@ -97,7 +97,7 @@ const Portfolio = () => (
           <PortfolioItem
             link="/portfolio/zala"
             title="Zala"
-            delay="100"
+            delay="50"
           />
           <PortfolioItem
             link="/portfolio/vozhero"
@@ -106,7 +106,7 @@ const Portfolio = () => (
           <PortfolioItem
             link="/portfolio/gabriellac"
             title="Gabriella C"
-            delay="100"
+            delay="50"
           />
         </SimpleGrid>
       </Box>
