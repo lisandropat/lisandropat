@@ -9,6 +9,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     "@chakra-ui/gatsby-plugin",
+    `gatsby-plugin-scroll-reveal`,
     'gatsby-plugin-page-transitions',
     `gatsby-plugin-react-helmet`,
     {

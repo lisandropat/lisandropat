@@ -20,6 +20,8 @@ const Node = ({ node }) => (
         width="auto"
         height="400px"
         className="spotlight-element"
+        data-sal="fade"
+        data-sal-duration="100"
     >
         <GatsbyImage 
             image={node.localFile.childImageSharp.gatsbyImageData} 

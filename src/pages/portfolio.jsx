@@ -16,6 +16,42 @@ import Footer from "../components/Footer/Footer"
 
 import CircleText from '../components/CircleText/CircleText';
 
+const PortfolioItem = ({ delay, title, link }) => (
+  <Link to={link} 
+    data-sal="zoom-in"
+    data-sal-delay={delay}
+    data-sal-duration="100"
+  >
+    <Box
+      backgroundColor={config.blackColor}
+      h={{ base: "400px", lg: "540px" }}
+      borderRadius="40px"
+      w="auto"
+      className="spotlight-element"
+      textAlign="center"
+      role="group"
+      overflow="hidden"
+    >
+      <Box
+        fontSize="36px"
+        letterSpacing="-1px"
+        lineHeight={{ base: "400px", lg: "540px" }}
+        color="white"
+        fontWeight="700"
+        backgroundColor="rgba(0,0,0,.25)"
+        padding="0 21px"
+        opacity="0"
+        transition=".5s"
+        _groupHover={{
+          opacity: 1
+        }}
+      >
+        {title}
+      </Box>
+    </Box>
+  </Link>
+)
+
 const Portfolio = () => (
   <Layout>
     {/* eslint-disable-next-line */}
@@ -54,122 +90,24 @@ const Portfolio = () => (
           columns={{ base: '1', xl: '2' }}
           className="spotlight"
         >
-          <Link to="/portfolio/evidencia">
-            <Box
-              backgroundColor={config.blackColor}
-              h={{ base: "400px", lg: "540px" }}
-              borderRadius="40px"
-              w="auto"
-              className="spotlight-element"
-              textAlign="center"
-              role="group"
-              overflow="hidden"
-            >
-              <Box
-                fontSize="36px"
-                letterSpacing="-1px"
-                lineHeight={{ base: "400px", lg: "540px" }}
-                color="white"
-                fontWeight="700"
-                backgroundColor="rgba(0,0,0,.25)"
-                padding="0 21px"
-                opacity="0"
-                transition=".5s"
-                _groupHover={{
-                  opacity: 1
-                }}
-              >
-                Evidencia
-              </Box>
-            </Box>
-          </Link>
-          <Link to="/portfolio/zala">
-            <Box
-              backgroundColor={config.blackColor}
-              h={{ base: "400px", lg: "540px" }}
-              borderRadius="40px"
-              w="auto"
-              className="spotlight-element"
-              textAlign="center"
-              role="group"
-              overflow="hidden"
-            >
-              <Box
-                fontSize="36px"
-                letterSpacing="-1px"
-                lineHeight={{ base: "400px", lg: "540px" }}
-                color="white"
-                fontWeight="700"
-                backgroundColor="rgba(0,0,0,.25)"
-                padding="0 21px"
-                opacity="0"
-                transition=".5s"
-                _groupHover={{
-                  opacity: 1
-                }}
-              >
-                Zala
-              </Box>
-            </Box>
-          </Link>
-          <Link to="/portfolio/vozhero">
-            <Box
-              backgroundColor={config.blackColor}
-              h={{ base: "400px", lg: "540px" }}
-              borderRadius="40px"
-              w="auto"
-              className="spotlight-element"
-              textAlign="center"
-              role="group"
-              overflow="hidden"
-            >
-              <Box
-                fontSize="36px"
-                letterSpacing="-1px"
-                lineHeight={{ base: "400px", lg: "540px" }}
-                color="white"
-                fontWeight="700"
-                backgroundColor="rgba(0,0,0,.25)"
-                padding="0 21px"
-                opacity="0"
-                transition=".5s"
-                _groupHover={{
-                  opacity: 1
-                }}
-              >
-                Vozhero
-              </Box>
-            </Box>
-          </Link>
-          <Link to="/portfolio/gabriellac">
-            <Box
-              backgroundColor={config.blackColor}
-              h={{ base: "400px", lg: "540px" }}
-              borderRadius="40px"
-              w="auto"
-              className="spotlight-element"
-              textAlign="center"
-              role="group"
-              overflow="hidden"
-            >
-              <Box
-                fontSize="36px"
-                letterSpacing="-1px"
-                lineHeight={{ base: "400px", lg: "540px" }}
-                color="white"
-                fontWeight="700"
-                backgroundColor="rgba(0,0,0,.25)"
-                padding="0 21px"
-                opacity="0"
-                transition=".5s"
-                _groupHover={{
-                  opacity: 1
-                }}
-              >
-                Gabriella C
-              </Box>
-            </Box>
-          </Link>
+          <PortfolioItem
+            link="/portfolio/evidencia"
+            title="Evidencia"
+          />
+          <PortfolioItem
+            link="/portfolio/zala"
+            title="Zala"
+            delay="100"
+          />
+          <PortfolioItem
+            link="/portfolio/vozhero"
+            title="Vozhero"
+          />
+          <PortfolioItem
+            link="/portfolio/gabriellac"
+            title="Gabriella C"
+            delay="100"
+          />
         </SimpleGrid>
       </Box>
       <Box maxWidth="1100px" padding={{ base: "0 20px", xl: '0' }} margin="0 auto">
@@ -209,27 +147,8 @@ const Portfolio = () => (
             borderRadius="40px"
             w="auto"
             className="spotlight-element"
-          />
-          <Box
-            backgroundColor={config.blackColor}
-            h={{ base: "200px", lg: "400px" }}
-            borderRadius="40px"
-            w="auto"
-            className="spotlight-element"
-          />
-          <Box
-            backgroundColor={config.blackColor}
-            h={{ base: "200px", lg: "400px" }}
-            borderRadius="40px"
-            w="auto"
-            className="spotlight-element"
-          />
-          <Box
-            backgroundColor={config.blackColor}
-            h={{ base: "200px", lg: "400px" }}
-            borderRadius="40px"
-            w="auto"
-            className="spotlight-element"
+            data-sal="zoom-in"
+            data-sal-duration="100"
           />
         </SimpleGrid>
       </Box>
