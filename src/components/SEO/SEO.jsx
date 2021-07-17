@@ -46,8 +46,8 @@ const SEO = ({ title, description }) => {
       <meta name="twitter:image" content="https://lisandropat.com/image.png" />
       
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@ottokoi" />
-      <meta name="twitter:creator" content="@ottokoi" />
+      <meta name="twitter:site" content={`@${config.authorTwitter}`} />
+      <meta name="twitter:creator" content={`@${config.authorTwitter}`} />
 
       <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet dns-prefetch" />

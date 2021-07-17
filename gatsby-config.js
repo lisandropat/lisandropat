@@ -51,16 +51,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-dribbble`,
+      options: {
+        access_token: `${process.env.ACCESS_TOKEN}`
+      }
+    },
+    {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `446560615`,
       },
-    },
-    {
-      resolve: `gatsby-source-dribbble`,
-      options: {
-        access_token: `${process.env.ACCESS_TOKEN}` // https://matthewelsom.com/blog/display-shots-on-webpage-with-dribbble-v2-api.html
-      }
     },
     `gatsby-plugin-offline` // Enables Progressive Web App + Offline functionality, visit: https://gatsby.dev/offline
   ],

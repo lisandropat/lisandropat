@@ -8,7 +8,7 @@ const config = {
     linkedinProfile: "https://www.linkedin.com/in/lisandropat/",
     githubProfile: "https://github.com/lisandropat",
 
-    authorTwitter: "ottokoi",
+    authorTwitter: "travelxtech",
     authorInstagram: "lisandropat",
     authorYouTube: "https://www.youtube.com/channel/UCdNC28FzPuwCunlXemYYOWw",
 
