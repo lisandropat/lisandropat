@@ -10,35 +10,35 @@ import {
 import '../../styles/index.scss';
 
 const Node = ({ node }) => (
-    <Link 
-        href={`https://www.instagram.com/p/${node.id}/`} 
+    <Link
+        href={node.url}
         target="_blank"
+        h={{ base: "200px", lg: "300px" }}
         borderRadius="40px"
         overflow="hidden"
-        width="auto"
-        height="400px"
+        w="auto"
         className="spotlight-element"
-        data-sal="fade"
+        data-sal="zoom-in"
         data-sal-duration="100"
     >
         <GatsbyImage 
-            image={node.localFile.childImageSharp.gatsbyImageData} 
+            image={node.localCover.childImageSharp.gatsbyImageData} 
             imgStyle={{ objectFit: 'cover' }} 
             style={{ minHeight: '100%' }}
         />
     </Link>
 )
 
-export const InstagramPosts = ({ nodes }) => {
+export const DribbbleShots = ({ nodes }) => {
     return (
         <SimpleGrid  
-            w="100%"
-            spacing="24px"
-            columns={{ base: '2', xl: '4' }}
-            className="spotlight"
+          w="100%"
+          spacing={{ base: '12px', lg: '24px' }}
+          columns={{ base: '2', xl: '4' }}
+          className="spotlight"
         >
-            {nodes.edges.map(instagram => (
-                <Node key={instagram.node.id} node={instagram.node} />
+            {nodes.edges.map(dribbble => (
+                <Node key={dribbble.node.id} node={dribbble.node} />
             ))}
         </SimpleGrid>
     )

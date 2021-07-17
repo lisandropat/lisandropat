@@ -1,5 +1,9 @@
 const config = require("./data/SiteConfig");
 
+require('dotenv').config({
+	path: `.env`
+})
+
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
@@ -51,6 +55,12 @@ module.exports = {
       options: {
         username: `446560615`,
       },
+    },
+    {
+      resolve: `gatsby-source-dribbble`,
+      options: {
+        access_token: `${process.env.ACCESS_TOKEN}` // https://matthewelsom.com/blog/display-shots-on-webpage-with-dribbble-v2-api.html
+      }
     },
     `gatsby-plugin-offline` // Enables Progressive Web App + Offline functionality, visit: https://gatsby.dev/offline
   ],

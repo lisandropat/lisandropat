@@ -175,7 +175,7 @@ const About = ({ data: { allInstaNode } }) => (
 )
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query InstagramQuery {
     allInstaNode(sort: {order: DESC, fields: timestamp}, limit: 4) {
         edges {
             node {

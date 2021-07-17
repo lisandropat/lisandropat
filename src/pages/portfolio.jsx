@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import config from "../../data/SiteConfig";
 
 import {
@@ -14,6 +14,7 @@ import SEO from "../components/SEO/SEO";
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
 
+import { DribbbleShots } from "../components/Dribbble/Dribbble";
 import CircleText from '../components/CircleText/CircleText';
 
 const PortfolioItem = ({ delay, title, link }) => (
@@ -52,7 +53,7 @@ const PortfolioItem = ({ delay, title, link }) => (
   </Link>
 )
 
-const Portfolio = () => (
+const Portfolio = ({ data: { allDribbbleShot } }) => (
   <Layout>
     {/* eslint-disable-next-line */}
     <SEO 
@@ -135,26 +136,29 @@ const Portfolio = () => (
         </Box>
       </Box>
       <Box maxWidth="1390px" padding={{ base: "0 20px", '2xl': '0' }} margin="0 auto">
-        <SimpleGrid  
-          w="100%"
-          spacing={{ base: '12px', lg: '24px' }}
-          columns={{ base: '2', xl: '3' }}
-          className="spotlight"
-        >
-          <Box
-            backgroundColor={config.blackColor}
-            h={{ base: "200px", lg: "400px" }}
-            borderRadius="40px"
-            w="auto"
-            className="spotlight-element"
-            data-sal="zoom-in"
-            data-sal-duration="100"
-          />
-        </SimpleGrid>
+        <DribbbleShots nodes={allDribbbleShot} />
       </Box>
     </Box>
     <Footer />
   </Layout>
 )
+
+export const pageQuery = graphql`
+  query DribbbleQuery {
+    allDribbbleShot(sort: {order: DESC, fields: published}, limit: 24) {
+      edges {
+        node {
+          url
+          id
+          localCover {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Portfolio
